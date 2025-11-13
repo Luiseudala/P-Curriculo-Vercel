@@ -4,18 +4,38 @@ html, body {
     padding: 0;
 }
 body{
-    background-color: rgb(255, 244, 227);
+    background-color: #fdf8ef; 
+  
 }
+
+.flower {
+    position: fixed;
+    width: 28vw;        
+    max-width: 20%;  
+    opacity: 0.95;
+    pointer-events: none;
+    z-index: -1; 
+}
+
+.flower.tl { top: 0; left: 0; }
+.flower.tr { top: 0; right: 0; }
+.flower.bl { bottom: 0; left: 0; }
+.flower.br { bottom: 0; right: 0; }
+
 #centralizar{
-        position: absolute;
+        position: relative;
         text-align: center;
-        background-color: rgb(255, 235, 198);
+        background-color: #FAF5EC;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(4px);
         padding: 25px;
         width: 50%;
-        left: 25%;
+        left: 24.5%;
         top: 50%;
+        border-radius: 2%;
         transform: translateY(-50%);
-        border: 5px solid black;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.148);
+
 }
 
 .conteudo {
@@ -23,37 +43,56 @@ body{
     height: 100%;
 }
 
-#ola{
-    width: 200px;
+#titulo{
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;          
+    font-weight: 600;
+    color: #6b463c;
+    line-height: 1.1;
+    margin-bottom: 10px;
 }
-a{
-    background-color: rgb(255, 250, 226);
-    border: 0px;
-    width: 100px;
-    text-decoration: none;
-    margin: 2px;
-    padding: 4px;
+
+#subtitulo{
+    color: #6b463c;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; 
+    opacity: 0.9;
+}
+
+a {
     display: inline-block;
-    color: black;
-    font-size: 19px;
-    font-family: garamound;
-    border-radius: 12%;
-    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 10px 28px;
+
+    background-color: #ffffff;
+    color: #6b463c; /* marrom da imagem */
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif; /* igual estilo da imagem */
+
+    border: none;
+    border-radius: 999px;  /* CAPSULE */
+
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    /* Sombra leve e elegante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.2s ease;
 }
-a:hover{
-    background-color: rgb(255, 212, 159);
+
+a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
 }
+
+a:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
 .moldura{
     position: absolute; 
     width: 150px;
-}
-
-.moldura-direita-cima {
-    right: -35px;
-    top: -57px;
-}
-.moldura-esquerda-baixo {
-    transform: rotate(180deg);
-    left: -35px;
-    bottom: -57px;
 }
